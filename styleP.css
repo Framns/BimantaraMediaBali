@@ -1,589 +1,476 @@
-.produk-section h1 {
-  font-size: 45px;
-  color: rgb(0, 36, 168);
-  margin-top: 100px;
-
-  text-align: center;
-
-  opacity: 0;
-  transform: translateY(-70px);
-  animation: startupA 1.3s ease forwards;
+/* =====================================================
+   styleP.css — Halaman Produk, CV Bimantara Media Bali
+   Semua aturan dibatasi di bawah body.produk-page supaya
+   tidak bentrok dengan style.css (header/footer bersama).
+   ===================================================== */
+ 
+.produk-page {
+  --blue: #0024a8;
+  --blue-deep: #001466;
+  --ink: #0c1536;
+  --muted: #4b5679;
+  --paper: rgb(229, 240, 255);
+  --footer: rgb(129, 198, 245);
+  --sheet: #f4f6fb;
+  --card: #ffffff;
+  --line: #dde3f0;
+  --pencil: #ffc933;
+ 
+  --gap: 20px;
+  --wrap: 1100px;
+  --side: 24px;
+ 
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
-@keyframes startupA {
-  from {
-    opacity: 0;
-    transform: translateY(-70px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+ 
+.produk-page .wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--side);
 }
-
-.produk-section h2 {
-  font-size: 30px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-
-  text-align: center;
-
-  opacity: 0;
-  transform: translateY(-70px);
-  animation: startupA 1.3s ease forwards;
+ 
+.produk-page img {
+  display: block;
+  max-width: 100%;
 }
-
-@keyframes startupA {
-  from {
-    opacity: 0;
-    transform: translateY(-70px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+ 
+/* =====================================================
+   HERO
+   ===================================================== */
+ 
+.produk-page .hero {
+  padding: 75px 0 24px;
 }
-
-.lemari-text {
-  font-size: 45px;
-  color: rgb(0, 36, 168);
-  text-align: center;
-  margin-bottom: 10px;
-
-  animation: startupB 1.3s ease forwards;
-}
-
-@keyframes startupB {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.produk-box {
-  width: 2011px;
-  height: 400px;
-
-  margin: auto;
-
-  display: flex;
-  gap: 30px;
-
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-
-  scrollbar-width: none;
-}
-
-.produk-box::-webkit-scrollbar {
-  display: none;
-}
-
-.card {
-  flex: 0 0 calc((100% - 60px) / 3);
-  text-align: center;
-  box-sizing: border-box;
-
-  margin-top: 7px;
-
-  background-color: white;
-  border-radius: 25px;
-
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-7px);
-  border: 2px solid rgb(0, 36, 168);
-}
-
-.card:active {
-  transform: translateY(-7px);
-}
-
-.card img {
-  margin-top: 20px;
-  width: 90%;
-  height: 200px;
-  object-fit: contain;
-}
-
-.card p {
-  margin-top: 10px;
-  margin-left: 40px;
-  font-size: 35px;
-  font-weight: 500;
-  width: 280px;
-}
-
-.produk-slider {
-  position: relative;
-
-  width: 1115.6px;
-  margin: auto;
-
-  display: flex;
-  align-items: center;
-
-  transform: translateY(250px);
-  animation: startupC 1.3s ease forwards;
-}
-
-@keyframes startupC {
-  from {
-    transform: translateY(250px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-.scroll-btn {
-  position: absolute;
-  z-index: 100;
-
-  width: 50px;
-  height: 100px;
-
-  border: none;
-  border-radius: 10px;
-
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.scroll-btn:hover {
-  filter: brightness(95%);
-}
-
-.scroll-btn.left {
-  left: -60px;
-}
-
-.scroll-btn.right {
-  right: -60px;
-}
-
-.produk-scroll-show {
-  opacity: 0;
-  transform: translateY(70px);
-  transition: 0.8s ease;
-}
-
-.produk-scroll-show.show {
-  transform: translateY(0);
+ 
+.produk-page .hero h1 {
+  margin: 0;
+  color: var(--blue);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-align: left;
   opacity: 1;
+  transform: none;
 }
-
-.laptop-text2 {
-  font-size: 45px;
-  color: rgb(0, 36, 168);
-  text-align: center;
-  margin-bottom: 10px;
-  margin-top: 100px;
+ 
+.produk-page .lead {
+  max-width: 54ch;
+  margin: 18px 0 28px;
+  color: var(--muted);
+  font-size: 1.1875rem;
+  line-height: 1.6;
 }
-
-.produk-box2 {
-  width: 2011px;
-  height: 400px;
-
-  margin: auto;
-
+ 
+/* Kategori sebagai pintu masuk */
+.produk-page .tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin-top: 48px;
+}
+ 
+.produk-page .tile {
   display: flex;
-  gap: 30px;
-
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-
-  scrollbar-width: none;
+  flex-direction: column;
+  padding: 12px 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--card);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.2s ease;
 }
-
-.produk-box2::-webkit-scrollbar {
-  display: none;
+ 
+.produk-page .tile:hover {
+  border-color: var(--blue);
 }
-
-.card2 {
-  flex: 0 0 calc((100% - 60px) / 3);
-  text-align: center;
-  box-sizing: border-box;
-
-  margin-top: 7px;
-
-  background-color: white;
-  border-radius: 25px;
-
-  transition: transform 0.3s ease;
+ 
+.produk-page .tile-img {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--sheet);
 }
-
-.card2:hover {
-  transform: translateY(-7px);
-  border: 2px solid rgb(0, 36, 168);
-}
-
-.card2:active {
-  transform: translateY(-7px);
-}
-
-.card2 img {
-  margin-top: 20px;
-  width: 90%;
-  height: 200px;
+ 
+.produk-page .tile-img img {
+  max-height: 100%;
+  width: auto;
   object-fit: contain;
 }
-
-.card2 p {
-  margin-top: 10px;
-  margin-left: 10px;
-  font-size: 30px;
-  font-weight: 500;
-  width: 320px;
+ 
+.produk-page .tile-name {
+  margin-top: 14px;
+  padding: 0 4px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
-
-.produk-slider2 {
-  position: relative;
-
-  width: 1115.6px;
-  margin: auto;
-
-  display: flex;
-  align-items: center;
+ 
+.produk-page .tile-count {
+  padding: 0 4px;
+  color: var(--muted);
+  font-size: 0.9375rem;
 }
-
-.scroll-btn2 {
-  position: absolute;
-  z-index: 100;
-
-  width: 50px;
-  height: 100px;
-
-  border: none;
-  border-radius: 10px;
-
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.scroll-btn2:hover {
-  filter: brightness(95%);
-}
-
-.scroll-btn2.left {
-  left: -60px;
-}
-
-.scroll-btn2.right {
-  right: -60px;
-}
-
-.desk-text3 {
-  font-size: 45px;
-  color: rgb(0, 36, 168);
-  text-align: center;
-  margin-bottom: 10px;
-  margin-top: 100px;
-}
-
-.produk-box3 {
-  width: 2011px;
-  height: 400px;
-
-  margin: auto;
-
-  display: flex;
-  gap: 30px;
-
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-
-  scrollbar-width: none;
-}
-
-.produk-box3::-webkit-scrollbar {
+ 
+.produk-page .tile-count:empty,
+.produk-page .category-count:empty {
   display: none;
 }
-
-.card3 {
-  flex: 0 0 calc((100% - 60px) / 3);
-  text-align: center;
-  box-sizing: border-box;
-
-  margin-top: 7px;
-
-  background-color: white;
-  border-radius: 25px;
-
-  transition: transform 0.3s ease;
+ 
+/* Satu momen animasi: hero muncul bertahap saat halaman dibuka */
+@media (prefers-reduced-motion: no-preference) {
+  .produk-page .rise {
+    animation: rise 0.7s cubic-bezier(0.6, 0.7, 0.6, 1) both;
+    animation-delay: calc(var(--i, 0) * 100ms);
+  }
+ 
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
-
-.card3:hover {
-  transform: translateY(-7px);
-  border: 2px solid rgb(0, 36, 168);
+ 
+/* =====================================================
+   KATEGORI + SLIDER
+   ===================================================== */
+ 
+.produk-page .category {
+  padding-top: 56px;
+  scroll-margin-top: 68px;
 }
-
-.card3:active {
-  transform: translateY(-7px);
-}
-
-.card3 img {
-  margin-top: 20px;
-  width: 90%;
-  height: 200px;
-  object-fit: contain;
-}
-
-.card3 p {
-  margin-top: 10px;
-  margin-left: 10px;
-  font-size: 35px;
-  font-weight: 500;
-  width: 320px;
-}
-
-.produk-slider3 {
-  position: relative;
-
-  width: 1115.7px;
-  margin: auto;
-
+ 
+.produk-page .category-head {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
 }
-
-.scroll-btn3 {
-  position: absolute;
-  z-index: 100;
-
-  width: 50px;
-  height: 100px;
-
-  border: none;
-  border-radius: 10px;
-
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.scroll-btn3:hover {
-  filter: brightness(95%);
-}
-
-.scroll-btn3.left {
-  left: -60px;
-}
-
-.scroll-btn3.right {
-  right: -60px;
-}
-
-.produk-scroll-show2 {
-  opacity: 0;
-  transform: translateY(70px);
-  transition: 0.8s ease;
-}
-
-.produk-scroll-show2.show {
-  transform: translateY(0);
+ 
+.produk-page .category-head h2 {
+  margin: 0;
+  color: var(--blue);
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: left;
   opacity: 1;
+  transform: none;
 }
-
-/* =========================
-   PHONE RESPONSIVE
-   ========================= */
-
-@media (max-width: 768px) {
-
-    /* Prevent the page itself from becoming wider than the phone */
-    body {
-        overflow-x: hidden;
-    }
-
-    .produk-section {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    /* Main title */
-    .produk-section h1 {
-        font-size: 32px;
-        margin-top: 120px;
-        padding: 0 15px;
-    }
-
-    .produk-section h2 {
-        font-size: 18px;
-        line-height: 1.4;
-        padding: 0 20px;
-        margin-bottom: 30px;
-    }
-
-    /* Category titles */
-    .lemari-text,
-    .laptop-text2,
-    .desk-text3 {
-        font-size: 30px;
-        margin-top: 60px;
-    }
-
-
-    /* =========================
-       SLIDER CONTAINERS
-       ========================= */
-
-    .produk-slider,
-    .produk-slider2,
-    .produk-slider3 {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 45px;
-    }
-
-
-    /* =========================
-       PRODUCT BOXES
-       ========================= */
-
-    .produk-box,
-    .produk-box2,
-    .produk-box3 {
-        width: 100%;
-        height: 350px;
-        box-sizing: border-box;
-
-        display: flex;
-        gap: 20px;
-
-        overflow-x: hidden;
-        overflow-y: hidden;
-
-        margin: 0;
-        padding: 0;
-    }
-
-
-    /* =========================
-       CARDS
-       ========================= */
-
-    .card,
-    .card2,
-    .card3 {
-        flex: 0 0 100%;
-        width: 100%;
-        height: 330px;
-
-        box-sizing: border-box;
-        margin-top: 7px;
-
-        border-radius: 20px;
-    }
-
-
-    /* Product images */
-    .card img,
-    .card2 img,
-    .card3 img {
-        width: 90%;
-        height: 190px;
-
-        margin-top: 15px;
-
-        object-fit: contain;
-    }
-
-
-    /* Product names */
-    .card p,
-    .card2 p,
-    .card3 p {
-        width: auto;
-        margin: 15px 15px 0;
-
-        font-size: 21px;
-        line-height: 1.25;
-    }
-
-
-    /* =========================
-       ARROW BUTTONS
-       ========================= */
-
-    .scroll-btn,
-    .scroll-btn2,
-    .scroll-btn3 {
-        width: 38px;
-        height: 75px;
-
-        font-size: 20px;
-        border-radius: 8px;
-    }
-
-
-    .scroll-btn.left,
-    .scroll-btn2.left,
-    .scroll-btn3.left {
-        left: 3px;
-    }
-
-    .scroll-btn.right,
-    .scroll-btn2.right,
-    .scroll-btn3.right {
-        right: 3px;
-    }
-
-
-    /* =========================
-       SCROLL SECTIONS
-       ========================= */
-
-    .produk-scroll-show,
-    .produk-scroll-show2 {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-
-    /* =========================
-       FOOTER
-       ========================= */
-
-    footer {
-        height: auto;
-        min-height: 300px;
-        box-sizing: border-box;
-        padding: 30px 20px;
-    }
-
-    .footer-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .footer-title img {
-        width: 45px;
-        height: auto;
-    }
-
-    .footer-title h2 {
-        font-size: 20px;
-    }
-
-    .loc-title {
-        margin-top: 25px;
-    }
-
-    .loc-title h1 {
-        font-size: 24px;
-    }
-
-    .loc-info {
-        margin: 0;
-    }
-
-    .loc-info p {
-        font-size: 16px;
-        margin: 5px 0;
-    }
+ 
+.produk-page .category-count {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+ 
+.produk-page .slider-controls {
+  display: flex;
+  gap: 10px;
+  flex: none;
+}
+ 
+.produk-page .slider-btn {
+  position: static;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--blue);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+ 
+.produk-page .slider-btn:hover:not(:disabled) {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #ffffff;
+}
+ 
+.produk-page .slider-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+ 
+/* Jalur kartu: scroll-snap bawaan browser, swipe di HP bekerja otomatis */
+.produk-page .track {
+  --per: 4;
+ 
+  display: flex;
+  gap: var(--gap);
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 4px 0 8px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.produk-page .track::-webkit-scrollbar {
+  display: none;
+}
+ 
+.produk-page .card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per));
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  text-align: left;
+  scroll-snap-align: start;
+  transition: border-color 0.2s ease;
+}
+ 
+.produk-page .card:hover {
+  transform: none;
+  border-color: var(--blue);
+}
+ 
+.produk-page .card-img {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  margin: 8px 8px 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--sheet);
+}
+ 
+.produk-page .card-img img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  object-fit: contain;
+}
+ 
+.produk-page .card-name {
+  width: auto;
+  margin: 0;
+  padding: 14px 16px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  overflow-wrap: anywhere;
+}
+ 
+/* =====================================================
+   FOOTER
+   ===================================================== */
+ 
+.produk-page .site-footer {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  margin: 80px 0 0;
+  padding: 56px 0 48px;
+  background: var(--footer);
+  color: #000000;
+}
+ 
+.produk-page .footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+ 
+.produk-page .footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+ 
+.produk-page .footer-brand img {
+  width: 52px;
+  height: 52px;
+  margin: 0;
+  object-fit: contain;
+  flex: none;
+}
+ 
+.produk-page .footer-name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+ 
+.produk-page .footer-col h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #000000;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+ 
+.produk-page .footer-col p {
+  max-width: 34ch;
+  margin: 0 0 14px;
+  color: rgb(8, 94, 204);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+ 
+.produk-page .footer-col a:not(.btn) {
+  color: rgb(8, 81, 176);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+ 
+.produk-page .footer-col a:not(.btn):hover {
+  color: var(--pencil);
+}
+ 
+.produk-page .site-footer a:focus-visible {
+  outline-color: var(--pencil);
+}
+ 
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+ 
+@media (max-width: 1023px) {
+  .produk-page .track {
+    --per: 3;
+  }
+}
+ 
+@media (max-width: 719px) {
+  .produk-page {
+    --side: 16px;
+    --gap: 14px;
+  }
+ 
+  .produk-page .header-inner {
+    height: 60px;
+  }
+ 
+  .produk-page .brand img {
+    width: 36px;
+    height: 36px;
+  }
+ 
+  .produk-page .brand-name {
+    font-size: 0.9375rem;
+  }
+ 
+  .produk-page .back-link {
+    padding: 8px 14px 8px 10px;
+    font-size: 0.875rem;
+  }
+ 
+  .produk-page .hero {
+    padding: 40px 0 8px;
+  }
+ 
+  .produk-page .lead {
+    font-size: 1.0625rem;
+  }
+ 
+  .produk-page .btn {
+    width: 100%;
+  }
+ 
+  .produk-page .tiles {
+    margin-top: 32px;
+    gap: 10px;
+  }
+ 
+  .produk-page .tile {
+    padding: 8px 8px 12px;
+    border-radius: 16px;
+  }
+ 
+  .produk-page .tile-img {
+    padding: 6px;
+    aspect-ratio: 1 / 1;
+  }
+ 
+  .produk-page .tile-name {
+    margin-top: 10px;
+    padding: 0 2px;
+    font-size: 0.9375rem;
+  }
+ 
+  .produk-page .tile-count {
+    padding: 0 2px;
+    font-size: 0.8125rem;
+  }
+ 
+  .produk-page .category {
+    padding-top: 44px;
+    scroll-margin-top: 60px;
+  }
+ 
+  /* Dua kartu per layar di tablet kecil, lalu satu + sedikit intip di HP */
+  .produk-page .track {
+    --per: 2;
+    margin-inline: calc(var(--side) * -1);
+    padding-inline: var(--side);
+    scroll-padding-inline: var(--side);
+    width: auto;
+  }
+ 
+  .produk-page .slider-btn {
+    width: 42px;
+    height: 42px;
+  }
+ 
+  .produk-page .site-footer {
+    margin-top: 56px;
+    padding: 40px 0 36px;
+  }
+ 
+  .produk-page .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+ 
+@media (max-width: 519px) {
+  .produk-page .track {
+    --per: 1.25;
+  }
+ 
+  .produk-page .brand-name {
+    max-width: 150px;
+  }
 }

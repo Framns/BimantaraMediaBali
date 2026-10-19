@@ -1,18 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV Bimantara Media Bali</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleP.css">
+    <meta
+      name="description"
+      content="Produk CV Bimantara Media Bali: lemari, elektronik, dan mebeler untuk kebutuhan sekolah."
+    />
+    <title>Produk Kita | CV Bimantara Media Bali</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleP.css" />
     <script src="script.js" defer></script>
     <script src="scriptP.js" defer></script>
   </head>
-  <body>
+
+  <body class="produk-page">
     <header id="header-anim">
       <div>
-        <img src="images/Logobm.png" alt="Logo"/>
+        <img src="images/Logobm.png" alt="Logo" />
         <h3>CV Bimantara Media Bali</h3>
 
         <nav>
@@ -29,304 +42,860 @@
     </header>
 
     <main>
-      <div class="produk-section">
-        <h1>Produk Kita</h1>
-        <h2>
-          Kita di Bimantara Media Bali menjual aneka ragam kebutuhan sekolah,
-          seperti...
-        </h2>
+      <!-- ========== HERO ========== -->
+      <section class="hero">
+        <div class="wrap">
+          <h1 class="rise" style="--i: 0">Produk Kita</h1>
+          <p class="lead rise" style="--i: 1">
+            Kita di Bimantara Media Bali menjual aneka ragam kebutuhan sekolah,
+            seperti lemari, elektronik, dan mebeler.
+          </p>
 
-        <div class="lemari-text">
-          <h3>Lemari</h3>
+          <nav class="tiles rise" style="--i: 3" aria-label="Kategori produk">
+            <a class="tile" href="#lemari">
+              <span class="tile-img">
+                <img
+                  src="images/produkImages/shelf3.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
+              <span class="tile-name">Lemari</span>
+              <span class="tile-count" data-count-for="lemari"></span>
+            </a>
+            <a class="tile" href="#elektronik">
+              <span class="tile-img">
+                <img
+                  src="images/produkImages/laptop.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
+              <span class="tile-name">Elektronik</span>
+              <span class="tile-count" data-count-for="elektronik"></span>
+            </a>
+            <a class="tile" href="#mebeler">
+              <span class="tile-img">
+                <img src="images/produkImages/desk.jpg" alt="" loading="lazy" />
+              </span>
+              <span class="tile-name">Mebeler</span>
+              <span class="tile-count" data-count-for="mebeler"></span>
+            </a>
+          </nav>
         </div>
+      </section>
 
-        <div class="produk-slider">
-          <button class="scroll-btn left" id="leftBtn">❮</button>
-
-          <div class="produk-box" id="produkBox">
-            <div class="card">
-              <img src="images/produkImages/shelf3.png" alt="shelf" />
-              <p>Filing Cabinet 2 Laci</p>
+      <!-- ========== LEMARI ========== -->
+      <section
+        class="category"
+        id="lemari"
+        data-slider
+        aria-labelledby="lemari-title"
+      >
+        <div class="wrap">
+          <div class="category-head">
+            <div>
+              <h2 id="lemari-title">Lemari</h2>
+              <p class="category-count" data-count-for="lemari"></p>
             </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf4.png" alt="shelf" />
-              <p>FIling cabinet 3 Laci</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf5.png" alt="shelf" />
-              <p>Filing Cabinet 4 Laci</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf6.png" alt="shelf" />
-              <p>Filing Cabinet 2 laci Super</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf7.png" alt="shelf" />
-              <p>Filing Cabinet 3 Laci Super</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf8.png" alt="shelf" />
-              <p>Filing Cabinet 4 laci Super</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf9.png" alt="shelf" />
-              <p>Lemari Tanpa Pintu</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf10.png" alt="shelf" />
-              <p>Lemari Tinggi 2 Pintu Ayun</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf11.png" alt="shelf" />
-              <p>Lemari Tinggi 3 Pintu Ayun Kaca</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf12.png" alt="shelf" />
-              <p>Lemari Tinggi 2 Pintu Ayun</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf13.png" alt="shelf" />
-              <p>Lemari Tinggi Pintu Ayun Kaca</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf14.png" alt="shelf" />
-              <p>Lemari Besar Tinggi</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf15.png" alt="shelf" />
-              <p>Lemari 1/2 Tinggi "(Rak 1 Lembar)"</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf16.png" alt="shelf" />
-              <p>Lemari 1/2 Tingii Pintu Ayun Kaca</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf17.png" alt="shelf" />
-              <p>Lemari Tinggi Pintu Ayun Kombinasi</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf18.png" alt="shelf" />
-              <p>Lemari Modular "(4+1 PT Ayun + 3 Laci)"</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf19.png" alt="shelf" />
-              <p>Lemari Modular "("4+1 PT Ayun + 3 Laci")"</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf20.png" alt="shelf" />
-              <p>Lemari TInggi Sliding Plat</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf1.png" alt="shelf" />
-              <p>Lemari Tinggi Sliding Kaca</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf22.png" alt="shelf" />
-              <p>Lemari 1/2 Tinggi Sliding Plat "(Rak 1 LBR)"</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf.png" alt="shelf" />
-              <p>Lemari 1/2 Tinggi Pintu Dorong Panjang</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf24.png" alt="shelf" />
-              <p>Lemari Tinggi Pintu Sliding Kombinasi</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf26.png" alt="shelf" />
-              <p>Lemari 4 PT "(2/3 Kaca + 1/3 Plat)"</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf27.png" alt="shelf" />
-              <p>Lemari 2 PT Kombinasi + 2 Laci</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf28.png" alt="shelf" />
-              <p>Lemari 2 PT Kaca 1 PLAT + 5 Laci</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf29.png" alt="shelf" />
-              <p>Lemari Gambar Horizontal 6 Laci A1</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf30.png" alt="shelf" />
-              <p>Lemari Gambar Horizontal 6 Laci A0</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf31.png" alt="shelf" />
-              <p>Rak Besi Serbaguna</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf31.png" alt="shelf" />
-              <p>Rak Buku Metal/BR - 04 BM</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf2.png" alt="shelf" />
-              <p>Rak Buku 2 Muka Single</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf33.png" alt="shelf" />
-              <p>Rak Buku 2 Muka Double</p>
-            </div>
-
-            <div class="card">
-              <img src="images/produkImages/shelf34.png" alt="shelf" />
-              <p>Rak Buku 2 Muka Triple</p>
+            <div class="slider-controls">
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="-1"
+                aria-label="Lihat produk sebelumnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15 5l-7 7 7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="1"
+                aria-label="Lihat produk berikutnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 5l7 7-7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
 
-          <button class="scroll-btn right" id="rightBtn">❯</button>
+          <ul class="track" tabindex="0" aria-label="Daftar lemari">
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf3.png"
+                  alt="Filing Cabinet 2 Laci"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Filing Cabinet 2 Laci</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf4.png"
+                  alt="Filing Cabinet 3 Laci"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Filing Cabinet 3 Laci</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf5.png"
+                  alt="Filing Cabinet 4 Laci"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Filing Cabinet 4 Laci</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf6.png"
+                  alt="Filing Cabinet 2 Laci Super"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Filing Cabinet 2 Laci Super</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf7.png"
+                  alt="Filing Cabinet 3 Laci Super"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Filing Cabinet 3 Laci Super</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf8.png"
+                  alt="Filing Cabinet 4 Laci Super"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Filing Cabinet 4 Laci Super</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf9.png"
+                  alt="Lemari Tanpa Pintu"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tanpa Pintu</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf10.png"
+                  alt="Lemari Tinggi 2 Pintu Ayun"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tinggi 2 Pintu Ayun</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf11.png"
+                  alt="Lemari Tinggi 3 Pintu Ayun Kaca"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tinggi 3 Pintu Ayun Kaca</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf12.png"
+                  alt="Lemari Tinggi 2 Pintu Ayun"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tinggi 2 Pintu Ayun</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf13.png"
+                  alt="Lemari Tinggi Pintu Ayun Kaca"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tinggi Pintu Ayun Kaca</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf14.png"
+                  alt="Lemari Besar Tinggi"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Besar Tinggi</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf15.png"
+                  alt="Lemari 1/2 Tinggi (Rak 1 Lembar)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari 1/2 Tinggi (Rak 1 Lembar)</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf16.png"
+                  alt="Lemari 1/2 Tinggi Pintu Ayun Kaca"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari 1/2 Tinggi Pintu Ayun Kaca</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf17.png"
+                  alt="Lemari Tinggi Pintu Ayun Kombinasi"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tinggi Pintu Ayun Kombinasi</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf18.png"
+                  alt="Lemari Modular (4+1 PT Ayun + 3 Laci)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Modular (4+1 PT Ayun + 3 Laci)</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf19.png"
+                  alt="Lemari Modular (4+1 PT Ayun + 3 Laci)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Modular (4+1 PT Ayun + 3 Laci)</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf20.png"
+                  alt="Lemari Tinggi Sliding Plat"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tinggi Sliding Plat</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf1.png"
+                  alt="Lemari Tinggi Sliding Kaca"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tinggi Sliding Kaca</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf22.png"
+                  alt="Lemari 1/2 Tinggi Sliding Plat (Rak 1 LBR)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">
+                Lemari 1/2 Tinggi Sliding Plat (Rak 1 LBR)
+              </p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf.png"
+                  alt="Lemari 1/2 Tinggi Pintu Dorong Panjang"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari 1/2 Tinggi Pintu Dorong Panjang</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf24.png"
+                  alt="Lemari Tinggi Pintu Sliding Kombinasi"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Tinggi Pintu Sliding Kombinasi</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf26.png"
+                  alt="Lemari 4 PT (2/3 Kaca + 1/3 Plat)"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari 4 PT (2/3 Kaca + 1/3 Plat)</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf27.png"
+                  alt="Lemari 2 PT Kombinasi + 2 Laci"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari 2 PT Kombinasi + 2 Laci</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf28.png"
+                  alt="Lemari 2 PT Kaca 1 Plat + 5 Laci"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari 2 PT Kaca 1 Plat + 5 Laci</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf29.png"
+                  alt="Lemari Gambar Horizontal 6 Laci A1"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Gambar Horizontal 6 Laci A1</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf30.png"
+                  alt="Lemari Gambar Horizontal 6 Laci A0"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Gambar Horizontal 6 Laci A0</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf31.png"
+                  alt="Rak Besi Serbaguna"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Rak Besi Serbaguna</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf31.png"
+                  alt="Rak Buku Metal/BR - 04 BM"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Rak Buku Metal/BR - 04 BM</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf2.png"
+                  alt="Rak Buku 2 Muka Single"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Rak Buku 2 Muka Single</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf33.png"
+                  alt="Rak Buku 2 Muka Double"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Rak Buku 2 Muka Double</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/shelf34.png"
+                  alt="Rak Buku 2 Muka Triple"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Rak Buku 2 Muka Triple</p>
+            </li>
+          </ul>
         </div>
+      </section>
 
-        <section class="produk-scroll-show">
-          <div class="laptop-text2">
-            <h3>Elektronik</h3>
-          </div>
-
-          <div class="produk-slider2">
-            <button class="scroll-btn2 left" id="leftBtn2">❮</button>
-
-            <div class="produk-box2" id="produkBox2">
-              <div class="card2">
-                <img src="images/produkImages/laptop.png" alt="shelf" />
-                <p>Notebook ASUS Expertbook BG1409CVA-S65850W</p>
-              </div>
-
-              <div class="card2">
-                <img src="images/produkImages/laptop3.png" alt="shelf" />
-                <p>Notebook Asus Expertbook BG1409CVA-S67150W</p>
-              </div>
-
-              <div class="card2">
-                <img src="images/produkImages/laptop4.png" alt="shelf" />
-                <p>LCD PROJECTOR EPSON EB-X600</p>
-              </div>
-
-              <div class="card2">
-                <img src="images/produkImages/laptop5.png" alt="shelf" />
-                <p>LCD PROJECTOR VIEW SONIC TB5030 XGA TKDN</p>
-              </div>
-
-              <div class="card2">
-                <img src="images/produkImages/laptop1.png" alt="shelf" />
-                <p>ASUS EXPERTCENTER AIO EG3408WVAK I5 1335 8GB 512GB W11PRO</p>
-              </div>
-
-              <div class="card2">
-                <img src="images/produkImages/laptop6.png" alt="shelf" />
-                <p>
-                  ASUS EXPERTCENTER AIO PG440VAK CORE 5 210H 16GB 512GB W11
-                  23.8FHD -BPC515WR
-                </p>
-              </div>
-
-              <div class="card2">
-                <img src="images/produkImages/laptop2.png" alt="shelf" />
-                <p>PRINTER EPSON L3211</p>
-              </div>
-
-              <div class="card2">
-                <img src="images/produkImages/laptop7.png" alt="shelf" />
-                <p>PRINTER EPSON L3251</p>
-              </div>
+      <!-- ========== ELEKTRONIK ========== -->
+      <section
+        class="category"
+        id="elektronik"
+        data-slider
+        aria-labelledby="elektronik-title"
+      >
+        <div class="wrap">
+          <div class="category-head">
+            <div>
+              <h2 id="elektronik-title">Elektronik</h2>
+              <p class="category-count" data-count-for="elektronik"></p>
             </div>
-
-            <button class="scroll-btn2 right" id="rightBtn2">❯</button>
-          </div>
-        </section>
-
-        <section class="produk-scroll-show2">
-          <div class="desk-text3">
-            <h3>Mebeler</h3>
-          </div>
-
-          <div class="produk-slider3">
-            <button class="scroll-btn3 left" id="leftBtn3">❮</button>
-
-            <div class="produk-box3" id="produkBox3">
-              <div class="card3">
-                <img src="images/produkImages/desk.jpg" alt="shelf" />
-                <p>Meja Guru</p>
-              </div>
-
-              <div class="card3">
-                <img src="images/produkImages/desk1.jpg" alt="shelf" />
-                <p>Kursi Siswa</p>
-              </div>
-
-              <div class="card3">
-                <img src="images/produkImages/desk3.jpg" alt="shelf" />
-                <p>Lemari Kelas</p>
-              </div>
-
-              <div class="card3">
-                <img src="images/produkImages/desk4.jpg" alt="shelf" />
-                <p>Lemari Arsip</p>
-              </div>
-
-              <div class="card3">
-                <img src="images/produkImages/desk2.jpg" alt="shelf" />
-                <p>Meja Siswa</p>
-              </div>
-
-              <div class="card3">
-                <img src="images/produkImages/desk5.jpg" alt="shelf" />
-                <p>Kursi Guru Kayu</p>
-              </div>
+            <div class="slider-controls">
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="-1"
+                aria-label="Lihat produk sebelumnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15 5l-7 7 7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="1"
+                aria-label="Lihat produk berikutnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 5l7 7-7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
-
-            <button class="scroll-btn3 right" id="rightBtn3">❯</button>
           </div>
-        </section>
-      </div>
+
+          <ul class="track" tabindex="0" aria-label="Daftar elektronik">
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/laptop.png"
+                  alt="Notebook ASUS ExpertBook BG1409CVA-S65850W"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">
+                Notebook ASUS ExpertBook BG1409CVA-S65850W
+              </p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/laptop3.png"
+                  alt="Notebook ASUS ExpertBook BG1409CVA-S67150W"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">
+                Notebook ASUS ExpertBook BG1409CVA-S67150W
+              </p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/laptop4.png"
+                  alt="LCD Projector Epson EB-X600"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">LCD Projector Epson EB-X600</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/laptop5.png"
+                  alt="LCD Projector ViewSonic TB5030 XGA TKDN"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">LCD Projector ViewSonic TB5030 XGA TKDN</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/laptop1.png"
+                  alt="ASUS ExpertCenter AIO EG3408WVAK i5 1335 8GB 512GB W11 Pro"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">
+                ASUS ExpertCenter AIO EG3408WVAK i5 1335 8GB 512GB W11 Pro
+              </p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/laptop6.png"
+                  alt="ASUS ExpertCenter AIO PG440VAK Core 5 210H 16GB 512GB W11 23.8 FHD - BPC515WR"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">
+                ASUS ExpertCenter AIO PG440VAK Core 5 210H 16GB 512GB W11 23.8
+                FHD - BPC515WR
+              </p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/laptop2.png"
+                  alt="Printer Epson L3211"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Printer Epson L3211</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/laptop7.png"
+                  alt="Printer Epson L3251"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Printer Epson L3251</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== MEBELER ========== -->
+      <section
+        class="category"
+        id="mebeler"
+        data-slider
+        aria-labelledby="mebeler-title"
+      >
+        <div class="wrap">
+          <div class="category-head">
+            <div>
+              <h2 id="mebeler-title">Mebeler</h2>
+              <p class="category-count" data-count-for="mebeler"></p>
+            </div>
+            <div class="slider-controls">
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="-1"
+                aria-label="Lihat produk sebelumnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15 5l-7 7 7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="1"
+                aria-label="Lihat produk berikutnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 5l7 7-7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <ul class="track" tabindex="0" aria-label="Daftar mebeler">
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/desk.jpg"
+                  alt="Meja Guru"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Meja Guru</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/desk1.jpg"
+                  alt="Kursi Siswa"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Kursi Siswa</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/desk3.jpg"
+                  alt="Lemari Kelas"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Kelas</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/desk4.jpg"
+                  alt="Lemari Arsip"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Lemari Arsip</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/desk2.jpg"
+                  alt="Meja Siswa"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Meja Siswa</p>
+            </li>
+            <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/desk5.jpg"
+                  alt="Kursi Guru Kayu"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Kursi Guru Kayu</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== SAINS ========== -->
+      <section
+        class="category"
+        id="sains"
+        data-slider
+        aria-labelledby="mebeler-title"
+      >
+        <div class="wrap">
+          <div class="category-head">
+            <div>
+              <h2 id="mebeler-title">Sains</h2>
+              <p class="category-count" data-count-for="sains"></p>
+            </div>
+            <div class="slider-controls">
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="-1"
+                aria-label="Lihat produk sebelumnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15 5l-7 7 7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="1"
+                aria-label="Lihat produk berikutnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 5l7 7-7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          
+      </section>
     </main>
 
-    <footer>
-      <div class="footer-title">
-        <img src="images/Logobm.png" alt="Logo"/>
-        <h2>CV Bimantara Media Bali</h2>
-      </div>
-      <div class="loc-title">
-        <h1>Toko kami</h1>
-      </div>
-      <div class="loc-info">
-        <p>Banjar Anyar, Kec. Kediri, Kabupaten Tabanan, Bali 82121</p>
-      </div>
-      <div class="loc-title">
-        <h1>Kontak kami</h1>
-      </div>
-      <div class="loc-info">
-        <p>081358594788</p>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <img src="images/Logobm.png" alt="Logo CV Bimantara Media Bali" />
+          <p class="footer-name">CV Bimantara Media Bali</p>
+        </div>
+
+        <div class="footer-col">
+          <h2>Toko kami</h2>
+          <p>Banjar Anyar, Kec. Kediri, Kabupaten Tabanan, Bali 82121</p>
+          <a
+            class="footer-link"
+            href="https://www.google.com/maps/place/Srikandi+Mart/@-8.5294334,115.1380931,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd23bf1a0261501:0x80c1065360ee2c57!8m2!3d-8.5294334!4d115.140668!16s%2Fg%2F11hk1lvch7?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener"
+            >Buka di Google Maps</a
+          >
+        </div>
+
+        <div class="footer-col">
+          <h2>Kontak kami</h2>
+          <p><a href="tel:081358594788">081358594788</a></p>
+          <p><a href="tel:018108208208">018108208208</a></p>
+          <a
+            class="btn"
+            href="https://wa.me/6281358594788?text=Halo%20CV%20Bimantara%20Media%20Bali%2C%20saya%20ingin%20menanyakan%20produk."
+            target="_blank"
+            rel="noopener"
+            >Chat via WhatsApp</a
+          >
+        </div>
       </div>
     </footer>
   </body>
