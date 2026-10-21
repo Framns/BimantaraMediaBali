@@ -380,6 +380,10 @@ header li {
     height: 650px;
   }
 
+  .home-img {
+    object-fit: cover;
+  }
+
   /* Cards */
 
   .image-row {
