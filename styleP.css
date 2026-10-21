@@ -3,7 +3,7 @@
    Semua aturan dibatasi di bawah body.produk-page supaya
    tidak bentrok dengan style.css (header/footer bersama).
    ===================================================== */
- 
+
 .produk-page {
   --blue: #0024a8;
   --blue-deep: #001466;
@@ -15,11 +15,11 @@
   --card: #ffffff;
   --line: #dde3f0;
   --pencil: #ffc933;
- 
+
   --gap: 20px;
   --wrap: 1100px;
   --side: 24px;
- 
+
   margin: 0;
   padding: 0;
   background: var(--paper);
@@ -29,27 +29,27 @@
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
- 
+
 .produk-page .wrap {
   width: 100%;
   max-width: var(--wrap);
   margin: 0 auto;
   padding: 0 var(--side);
 }
- 
+
 .produk-page img {
   display: block;
   max-width: 100%;
 }
- 
+
 /* =====================================================
    HERO
    ===================================================== */
- 
+
 .produk-page .hero {
   padding: 75px 0 24px;
 }
- 
+
 .produk-page .hero h1 {
   margin: 0;
   color: var(--blue);
@@ -61,7 +61,7 @@
   opacity: 1;
   transform: none;
 }
- 
+
 .produk-page .lead {
   max-width: 54ch;
   margin: 18px 0 28px;
@@ -69,7 +69,7 @@
   font-size: 1.1875rem;
   line-height: 1.6;
 }
- 
+
 /* Kategori sebagai pintu masuk */
 .produk-page .tiles {
   display: grid;
@@ -77,7 +77,7 @@
   gap: var(--gap);
   margin-top: 48px;
 }
- 
+
 .produk-page .tile {
   display: flex;
   flex-direction: column;
@@ -89,11 +89,11 @@
   text-decoration: none;
   transition: border-color 0.2s ease;
 }
- 
+
 .produk-page .tile:hover {
   border-color: var(--blue);
 }
- 
+
 .produk-page .tile-img {
   display: grid;
   place-items: center;
@@ -102,13 +102,13 @@
   border-radius: 12px;
   background: var(--sheet);
 }
- 
+
 .produk-page .tile-img img {
   max-height: 100%;
   width: auto;
   object-fit: contain;
 }
- 
+
 .produk-page .tile-name {
   margin-top: 14px;
   padding: 0 4px;
@@ -116,25 +116,25 @@
   font-weight: 700;
   letter-spacing: -0.01em;
 }
- 
+
 .produk-page .tile-count {
   padding: 0 4px;
   color: var(--muted);
   font-size: 0.9375rem;
 }
- 
+
 .produk-page .tile-count:empty,
 .produk-page .category-count:empty {
   display: none;
 }
- 
+
 /* Satu momen animasi: hero muncul bertahap saat halaman dibuka */
 @media (prefers-reduced-motion: no-preference) {
   .produk-page .rise {
     animation: rise 0.7s cubic-bezier(0.6, 0.7, 0.6, 1) both;
     animation-delay: calc(var(--i, 0) * 100ms);
   }
- 
+
   @keyframes rise {
     from {
       opacity: 0;
@@ -146,16 +146,16 @@
     }
   }
 }
- 
+
 /* =====================================================
    KATEGORI + SLIDER
    ===================================================== */
- 
+
 .produk-page .category {
   padding-top: 56px;
   scroll-margin-top: 68px;
 }
- 
+
 .produk-page .category-head {
   display: flex;
   align-items: flex-end;
@@ -163,7 +163,7 @@
   gap: 16px;
   margin-bottom: 20px;
 }
- 
+
 .produk-page .category-head h2 {
   margin: 0;
   color: var(--blue);
@@ -175,19 +175,19 @@
   opacity: 1;
   transform: none;
 }
- 
+
 .produk-page .category-count {
   margin: 4px 0 0;
   color: var(--muted);
   font-size: 0.9375rem;
 }
- 
+
 .produk-page .slider-controls {
   display: flex;
   gap: 10px;
   flex: none;
 }
- 
+
 .produk-page .slider-btn {
   position: static;
   display: grid;
@@ -202,22 +202,22 @@
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
- 
+
 .produk-page .slider-btn:hover:not(:disabled) {
   background: var(--blue);
   border-color: var(--blue);
   color: #ffffff;
 }
- 
+
 .produk-page .slider-btn:disabled {
   opacity: 0.35;
   cursor: default;
 }
- 
+
 /* Jalur kartu: scroll-snap bawaan browser, swipe di HP bekerja otomatis */
 .produk-page .track {
   --per: 4;
- 
+
   display: flex;
   gap: var(--gap);
   width: 100%;
@@ -231,11 +231,11 @@
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
- 
+
 .produk-page .track::-webkit-scrollbar {
   display: none;
 }
- 
+
 .produk-page .card {
   display: flex;
   flex-direction: column;
@@ -251,12 +251,12 @@
   scroll-snap-align: start;
   transition: border-color 0.2s ease;
 }
- 
+
 .produk-page .card:hover {
   transform: none;
   border-color: var(--blue);
 }
- 
+
 .produk-page .card-img {
   display: grid;
   place-items: center;
@@ -266,7 +266,7 @@
   border-radius: 10px;
   background: var(--sheet);
 }
- 
+
 .produk-page .card-img img {
   width: auto;
   height: auto;
@@ -275,7 +275,7 @@
   margin: 0;
   object-fit: contain;
 }
- 
+
 .produk-page .card-name {
   width: auto;
   margin: 0;
@@ -286,155 +286,188 @@
   letter-spacing: -0.005em;
   overflow-wrap: anywhere;
 }
- 
+
+
 /* =====================================================
-   RESPONSIVE
-   ===================================================== */
- 
-@media (max-width: 1023px) {
+   TABLET
+   769px - 1024px
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  /* Product slider: 3 cards per screen */
+
   .produk-page .track {
     --per: 3;
   }
 }
- 
-@media (max-width: 719px) {
+
+
+/* =====================================================
+   MOBILE
+   768px and below
+   (the shared header in style.css is 115px tall here)
+===================================================== */
+
+@media (max-width: 768px) {
+
   .produk-page {
     --side: 16px;
     --gap: 14px;
+
+    overflow-x: hidden;
   }
- 
-  .produk-page .header-inner {
-    height: 60px;
-  }
- 
-  .produk-page .brand img {
-    width: 36px;
-    height: 36px;
-  }
- 
-  .produk-page .brand-name {
-    font-size: 0.9375rem;
-  }
- 
-  .produk-page .back-link {
-    padding: 8px 14px 8px 10px;
-    font-size: 0.875rem;
-  }
- 
+
+  /* =========================
+     HERO
+  ========================= */
+
   .produk-page .hero {
-    padding: 40px 0 8px;
+    padding: 150px 0 8px;
   }
- 
+
   .produk-page .lead {
     font-size: 1.0625rem;
   }
- 
+
   .produk-page .btn {
     width: 100%;
   }
- 
+
+  /* =========================
+     TILES
+  ========================= */
+
   .produk-page .tiles {
     margin-top: 32px;
     gap: 10px;
   }
- 
+
   .produk-page .tile {
+    min-width: 0;
     padding: 8px 8px 12px;
     border-radius: 16px;
   }
- 
+
   .produk-page .tile-img {
     padding: 6px;
     aspect-ratio: 1 / 1;
   }
- 
+
   .produk-page .tile-name {
     margin-top: 10px;
     padding: 0 2px;
     font-size: 0.9375rem;
+    overflow-wrap: anywhere;
   }
- 
+
   .produk-page .tile-count {
     padding: 0 2px;
     font-size: 0.8125rem;
   }
- 
+
+  /* =========================
+     CATEGORY + SLIDER
+  ========================= */
+
   .produk-page .category {
     padding-top: 44px;
-    scroll-margin-top: 60px;
+    scroll-margin-top: 130px;
   }
- 
-  /* Dua kartu per layar di tablet kecil, lalu satu + sedikit intip di HP */
+
+  /* 2 cards per screen, swipe to see more */
+
   .produk-page .track {
     --per: 2;
+
+    width: auto;
+
     margin-inline: calc(var(--side) * -1);
     padding-inline: var(--side);
     scroll-padding-inline: var(--side);
-    width: auto;
   }
- 
+
   .produk-page .slider-btn {
     width: 42px;
     height: 42px;
   }
- 
+
+  /* =========================
+     FOOTER
+  ========================= */
+
   .produk-page .site-footer {
     margin-top: 56px;
+
     padding: 40px 0 36px;
   }
- 
+
   .produk-page .footer-grid {
     grid-template-columns: 1fr;
+
     gap: 28px;
+
+    padding: 0 25px;
   }
 }
- 
-@media (max-width: 519px) {
-  .produk-page .track {
-    --per: 1.25;
-  }
- 
-  .produk-page .brand-name {
-    max-width: 150px;
-  }
-}
+
 
 /* =====================================================
-   HEADER OFFSET
-   The shared header (style.css) is fixed and gets taller
-   on small screens: 115px at 768px and below, 110px at
-   480px and below. These keep the hero and the anchor
-   jumps from ending up underneath it.
-   ===================================================== */
+   SMALL PHONES
+   480px and below
+   (the shared header in style.css is 110px tall here)
+===================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+
+  /* Hero */
+
   .produk-page .hero {
-    padding-top: 125px;
+    padding-top: 145px;
   }
 
   .produk-page .category {
     scroll-margin-top: 125px;
   }
-}
 
-@media (max-width: 480px) {
-  .produk-page .hero {
-    padding-top: 120px;
+  /* 1 card per screen with the next one peeking in */
+
+  .produk-page .track {
+    --per: 1.25;
   }
 
-  .produk-page .category {
-    scroll-margin-top: 120px;
+  /* Footer */
+
+  .produk-page .site-footer {
+    padding: 35px 0 30px;
+  }
+
+  .produk-page .footer-grid {
+    padding: 0 20px;
   }
 }
 
-/* Long category names stay inside the small tiles on phones */
 
-@media (max-width: 719px) {
+/* =====================================================
+   EXTRA SMALL PHONES
+   360px and below
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .produk-page .tiles {
+    gap: 8px;
+  }
+
   .produk-page .tile {
-    min-width: 0;
+    padding: 6px 6px 10px;
   }
 
   .produk-page .tile-name {
-    overflow-wrap: anywhere;
+    font-size: 0.875rem;
+  }
+
+  .produk-page .category-head h2 {
+    font-size: 1.5rem;
   }
 }
