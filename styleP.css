@@ -289,6 +289,24 @@
 
 
 /* =====================================================
+   LAPTOP AND BELOW
+   1148px and below
+   .wrap is width: 100% plus side padding, which makes it
+   wider than the screen once the screen is narrower than
+   max-width + padding. border-box keeps it inside the
+   screen, so there is no sideways overflow and no gap
+   on the right of the footer.
+===================================================== */
+
+@media (max-width: 1148px) {
+
+  .produk-page .wrap {
+    box-sizing: border-box;
+  }
+}
+
+
+/* =====================================================
    TABLET
    769px - 1024px
 ===================================================== */
@@ -396,7 +414,7 @@
      FOOTER
   ========================= */
 
-  /* .produk-page .site-footer {
+  .produk-page .site-footer {
     margin-top: 56px;
 
     padding: 40px 0 36px;
@@ -408,7 +426,7 @@
     gap: 28px;
 
     padding: 0 25px;
-  } */
+  }
 }
 
 
@@ -438,13 +456,13 @@
 
   /* Footer */
 
-  /* .produk-page .site-footer {
+  .produk-page .site-footer {
     padding: 35px 0 30px;
   }
 
   .produk-page .footer-grid {
     padding: 0 20px;
-  } */
+  }
 }
 
 
