@@ -398,8 +398,9 @@ header li {
 
   /* Footer */
 
-  footer {
-    padding: 35px;
+  .footer-grid {
+    gap: 30px;
+    padding: 0 35px;
   }
 }
 
@@ -457,6 +458,7 @@ header li {
 
   header li {
     padding-left: 0;
+    margin-left: 0;
   }
 
   #header-anim a {
@@ -539,43 +541,37 @@ header li {
      FOOTER
   ========================= */
 
-  footer {
-    min-height: auto;
-
+  .site-footer {
     margin-top: 80px;
 
-    padding: 35px 25px 45px;
+    padding: 35px 0 45px;
   }
 
-  .footer-title {
-    gap: 10px;
+  /* Stack the three footer columns */
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 0 25px;
   }
 
-  .footer-title img {
+  .footer-brand img {
     width: 42px;
     height: 42px;
   }
 
-  .footer-title h2 {
-    font-size: 18px;
+  .footer-name {
+    font-size: 1.125rem;
   }
 
-  .loc-title {
-    margin-left: 0;
-    margin-top: 25px;
+  .footer-col h2 {
+    font-size: 1.0625rem;
   }
 
-  .loc-title h1 {
-    font-size: 25px;
-  }
-
-  .loc-info {
-    display: block;
-
-    margin-left: 0;
-    margin-top: 5px;
-
-    font-size: 16px;
+  .footer-col p {
+    max-width: none;
   }
 }
 
@@ -656,19 +652,50 @@ header li {
 
   /* Footer */
 
-  footer {
-    padding: 30px 20px 40px;
+  .site-footer {
+    padding: 30px 0 40px;
   }
 
-  .footer-title h2 {
-    font-size: 16px;
+  .footer-grid {
+    padding: 0 20px;
   }
 
-  .loc-title h1 {
-    font-size: 22px;
+  .footer-name {
+    font-size: 1rem;
   }
 
-  .loc-info {
-    font-size: 15px;
+  .footer-col h2 {
+    font-size: 1rem;
+  }
+
+  .footer-col p {
+    font-size: 0.9375rem;
+  }
+}
+
+/* =====================================================
+   EXTRA SMALL PHONES
+   360px and below
+===================================================== */
+
+@media (max-width: 360px) {
+
+  header h3 {
+    font-size: 14px;
+  }
+
+  #header-anim a {
+    padding-left: 3px;
+    padding-right: 3px;
+
+    font-size: 11px;
+  }
+
+  #header-anim a:hover {
+    font-size: 12px;
+  }
+
+  .flex-img h1 {
+    font-size: 25px;
   }
 }
