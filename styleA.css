@@ -3,11 +3,13 @@
 ========================= */
 
 .about-section {
-  margin-top: 40px;
+  margin-top: 35px;
   padding: 50px;
 
   opacity: 0;
   transform: translateY(-70px);
+
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   animation: BstartupA 1.3s ease forwards;
 }
@@ -26,14 +28,16 @@
 
 .about-section h1 {
   color: rgb(0, 36, 168);
-
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
   text-align: center;
 }
 
-.about-section h3 {
+.about-section p {
   margin-top: 15px;
 
   text-align: center;
+  justify-content: space-around;
 
   font-size: clamp(25px, 1.5vw, 30px);
   line-height: 1.4;
@@ -126,7 +130,7 @@
   text-align: center;
 }
 
-.box-V h3 {
+.box-V p {
   font-size: clamp(20px, 2.5vw, 30px);
   line-height: 1.3;
 
@@ -167,7 +171,7 @@
   text-align: center;
 }
 
-.box-M h3 {
+.box-M p {
   font-size: clamp(20px, 2.5vw, 30px);
   line-height: 1.3;
 
@@ -217,10 +221,10 @@
   text-align: center;
 }
 
-.motto h2 {
+.motto p {
   margin: 10px 0 0;
 
-  font-size: clamp(20px, 3vw, 30px);
+  font-size: clamp(15px, 2vw, 30px);
 
   text-align: center;
 }
@@ -240,7 +244,7 @@ padding: 35px 25px;
 font-size: clamp(28px, 4vw, 38px);
 }
 
-.about-section h3 {
+.about-section p {
 font-size: clamp(20px, 2.6vw, 25px);
 line-height: 1.5;
 }
@@ -275,8 +279,8 @@ max-width: 80%;
 font-size: clamp(25px, 3vw, 32px);
 }
 
-.box-V h3,
-.box-M h3 {
+.box-V p,
+.box-M p {
 font-size: clamp(18px, 2.2vw, 23px);
 line-height: 1.45;
 }
@@ -297,7 +301,7 @@ width: 170px;
 font-size: clamp(28px, 4vw, 38px);
 }
 
-.motto h2 {
+.motto p {
 font-size: clamp(19px, 2.7vw, 25px);
 line-height: 1.5;
 }
@@ -319,23 +323,9 @@ font-size: 30px;
 line-height: 1.3;
 }
 
-.about-section h3 {
+.about-section p {
 margin-top: 12px;
 font-size: 19px;
-line-height: 1.6;
-}
-
-/* Company description box */
-
-.box {
-width: 100%;
-min-height: auto;
-padding: 20px;
-box-sizing: border-box;
-}
-
-.box h3 {
-font-size: 18px;
 line-height: 1.6;
 }
 
@@ -384,8 +374,8 @@ line-height: 1.3;
 margin-top: 18px;
 }
 
-.box-V h3,
-.box-M h3 {
+.box-V p,
+.box-M p {
 margin-bottom: 0;
 font-size: 19px;
 line-height: 1.6;
@@ -411,7 +401,7 @@ line-height: 1.4;
 overflow-wrap: break-word;
 }
 
-.motto h2 {
+.motto p {
 font-size: 19px;
 line-height: 1.6;
 overflow-wrap: break-word;
@@ -433,30 +423,8 @@ padding: 20px 12px;
 font-size: 26px;
 }
 
-.about-section h3 {
+.about-section p {
 font-size: 17px;
-line-height: 1.6;
-}
-
-/* Images above the company description */
-
-.about-section > img {
-display: block;
-width: 110px;
-max-width: 50%;
-height: auto;
-margin: 100px auto 20px;
-}
-
-/* Company description box */
-
-.box {
-padding: 16px;
-border-radius: 18px;
-}
-
-.box h3 {
-font-size: 16px;
 line-height: 1.6;
 }
 
@@ -487,8 +455,8 @@ width: 120px;
 font-size: 25px;
 }
 
-.box-V h3,
-.box-M h3 {
+.box-V p,
+.box-M p {
 font-size: 16px;
 line-height: 1.6;
 }
@@ -510,7 +478,7 @@ font-size: 25px;
 line-height: 1.4;
 }
 
-.motto h2 {
+.motto p {
 font-size: 16px;
 line-height: 1.6;
 }
@@ -531,7 +499,7 @@ padding-left: 10px;
 font-size: 24px;
 }
 
-.about-section h3 {
+.about-section p {
 font-size: 16px;
 }
 
@@ -545,8 +513,8 @@ padding: 18px 12px;
 font-size: 23px;
 }
 
-.box-V h3,
-.box-M h3 {
+.box-V p,
+.box-M p {
 font-size: 15px;
 }
 
@@ -554,7 +522,7 @@ font-size: 15px;
 font-size: 23px;
 }
 
-.motto h2 {
+.motto p {
 font-size: 15px;
 }
 }
