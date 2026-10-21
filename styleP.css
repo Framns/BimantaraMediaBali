@@ -288,82 +288,6 @@
 }
  
 /* =====================================================
-   FOOTER
-   ===================================================== */
- 
-.produk-page .site-footer {
-  position: static;
-  display: block;
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  margin: 80px 0 0;
-  padding: 56px 0 48px;
-  background: var(--footer);
-  color: #000000;
-}
- 
-.produk-page .footer-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
- 
-.produk-page .footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
- 
-.produk-page .footer-brand img {
-  width: 52px;
-  height: 52px;
-  margin: 0;
-  object-fit: contain;
-  flex: none;
-}
- 
-.produk-page .footer-name {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-}
- 
-.produk-page .footer-col h2 {
-  margin: 0 0 10px;
-  padding: 0;
-  color: #000000;
-  font-size: 1.125rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
- 
-.produk-page .footer-col p {
-  max-width: 34ch;
-  margin: 0 0 14px;
-  color: rgb(8, 94, 204);
-  font-size: 1rem;
-  line-height: 1.3;
-}
- 
-.produk-page .footer-col a:not(.btn) {
-  color: rgb(8, 81, 176);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
- 
-.produk-page .footer-col a:not(.btn):hover {
-  color: var(--pencil);
-}
- 
-.produk-page .site-footer a:focus-visible {
-  outline-color: var(--pencil);
-}
- 
-/* =====================================================
    RESPONSIVE
    ===================================================== */
  
@@ -472,5 +396,45 @@
  
   .produk-page .brand-name {
     max-width: 150px;
+  }
+}
+
+/* =====================================================
+   HEADER OFFSET
+   The shared header (style.css) is fixed and gets taller
+   on small screens: 115px at 768px and below, 110px at
+   480px and below. These keep the hero and the anchor
+   jumps from ending up underneath it.
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .produk-page .hero {
+    padding-top: 125px;
+  }
+
+  .produk-page .category {
+    scroll-margin-top: 125px;
+  }
+}
+
+@media (max-width: 480px) {
+  .produk-page .hero {
+    padding-top: 120px;
+  }
+
+  .produk-page .category {
+    scroll-margin-top: 120px;
+  }
+}
+
+/* Long category names stay inside the small tiles on phones */
+
+@media (max-width: 719px) {
+  .produk-page .tile {
+    min-width: 0;
+  }
+
+  .produk-page .tile-name {
+    overflow-wrap: anywhere;
   }
 }
