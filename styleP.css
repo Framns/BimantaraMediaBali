@@ -415,17 +415,36 @@
   ========================= */
 
   .produk-page .site-footer {
-    margin-top: 56px;
+    margin-top: 80px;
 
-    padding: 40px 0 36px;
+    padding: 35px 0 45px;
   }
+
+  /* Stack the three footer columns */
 
   .produk-page .footer-grid {
     grid-template-columns: 1fr;
 
-    gap: 28px;
+    gap: 30px;
 
     padding: 0 25px;
+  }
+
+  .produk-page .footer-brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .produk-page .footer-name {
+    font-size: 1.125rem;
+  }
+
+  .produk-page .footer-col h2 {
+    font-size: 1.0625rem;
+  }
+
+  .produk-page .footer-col p {
+    max-width: none;
   }
 }
 
@@ -457,11 +476,23 @@
   /* Footer */
 
   .produk-page .site-footer {
-    padding: 35px 0 30px;
+    padding: 30px 0 40px;
   }
 
   .produk-page .footer-grid {
     padding: 0 20px;
+  }
+
+  .produk-page .footer-name {
+    font-size: 1rem;
+  }
+
+  .produk-page .footer-col h2 {
+    font-size: 1rem;
+  }
+
+  .produk-page .footer-col p {
+    font-size: 0.9375rem;
   }
 }
 
