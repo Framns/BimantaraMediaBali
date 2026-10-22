@@ -638,6 +638,10 @@ header li {
     object-fit: cover;
   }
 
+  .why-us {
+    box-sizing: border-box;
+  }
+
   .why-grid {
     display: flex;
     flex-direction: column;
