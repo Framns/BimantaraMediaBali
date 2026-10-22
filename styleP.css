@@ -470,7 +470,7 @@
   /* 1 card per screen with the next one peeking in */
 
   .produk-page .track {
-    --per: 1.25;
+    --per: 1;
   }
 
   /* Footer */
