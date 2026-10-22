@@ -639,7 +639,11 @@ header li {
   }
 
   .why-grid {
-    grid-template-columns: repeat(1, 3fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 0;
   }
 
   /* Know us more: stack cards vertically */
