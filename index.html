@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV Bimantara Media Bali</title>
-    <link rel="stylesheet" href="style.css">  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
+
   <body>
     <header id="header-anim">
       <div>
-        <img src="images/Logobm.png" alt="Logo"/>
+        <img src="images/Logobm.png" alt="Logo" />
         <h3>CV Bimantara Media Bali</h3>
 
         <nav>
@@ -45,6 +54,7 @@
     </header>
 
     <main>
+      <!-- HERO -->
       <section id="home-nav">
         <img
           id="heroImage"
@@ -52,32 +62,71 @@
           src="images/landPageIMG/Land1.jpeg"
           alt="Foto toko dari 45 derajat"
         />
+
+        <div class="hero-content">
+          <span class="hero-eyebrow">Tabanan, Bali</span>
+          <h2>Semua Kebutuhan Anda, Satu Tempat</h2>
+          <p>Produk lengkap dengan harga terjangkau, langsung dari toko kami.</p>
+          <div class="hero-buttons">
+            <a href="produk.html" class="btn btn-primary">Lihat Produk</a>
+            <a href="contacs.html" class="btn btn-ghost">Hubungi Kami</a>
+          </div>
+        </div>
       </section>
 
-        <section class="flex-image-link">
-          <h1>KNOW US MORE!</h1>
-          <div class="image-row">
-            <div class="flex-img">
-              <div class="image-hover">
-                <a href="abour.html"><img src="images/webBimageA.jpg"></a>
-                <h1>Tentang kami</h1>
-              </div>
+      <!-- WHY CHOOSE US -->
+      <section class="why-us">
+        <div class="why-anim">
+          <h2 class="section-title">Kenapa Memilih Kami?</h2>
+          <p class="section-sub">Tiga alasan pelanggan kembali berbelanja.</p>
+
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="why-icon">🛒</div>
+              <h3>Produk Lengkap</h3>
+              <p>Berbagai kebutuhan harian tersedia di satu tempat.</p>
             </div>
-            <div class="flex-img">
-              <div class="image-hover">
-                <a href="produk.html"><img src="images/webBimageP.jpg"></a>
-                <h1>Produk kami</h1>
-              </div>
+            <div class="why-card">
+              <div class="why-icon">💰</div>
+              <h3>Harga Terjangkau</h3>
+              <p>Harga bersahabat tanpa mengorbankan kualitas.</p>
             </div>
-            <div class="flex-img">
-              <div class="image-hover">
-                <a href="contacs.html"><img src="images/webBimageC.jpg"></a>
-                <h1>Kontak kami</h1>
-              </div>
+            <div class="why-card">
+              <div class="why-icon">📍</div>
+              <h3>Lokasi Mudah</h3>
+              <p>Mudah dijangkau dari Kediri dan sekitarnya.</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <!-- KNOW US MORE -->
+      <section class="flex-image-link">
+        <h1>KNOW US MORE!</h1>
+
+        <div class="image-row">
+          <div class="flex-img">
+            <div class="image-hover">
+              <a href="abour.html"><img src="images/webBimageA.jpg" /></a>
+              <h1>Tentang kami</h1>
+            </div>
+          </div>
+          <div class="flex-img">
+            <div class="image-hover">
+              <a href="produk.html"><img src="images/webBimageP.jpg" /></a>
+              <h1>Produk kami</h1>
+            </div>
+          </div>
+          <div class="flex-img">
+            <div class="image-hover">
+              <a href="contacs.html"><img src="images/webBimageC.jpg" /></a>
+              <h1>Kontak kami</h1>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer class="site-footer">
       <div class="footer-grid">
         <div class="footer-brand">

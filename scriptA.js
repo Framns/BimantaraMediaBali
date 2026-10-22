@@ -1,47 +1,15 @@
-// console.log("SCRIPT A IS WORKING!");
+// Fade elements in when they scroll into view, and out again when they leave.
+// Each element is watched on its own, so it animates when you actually reach it.
 
-const aboutSection = document.querySelector(".about-anim");
-
-const aboutObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        const images = entry.target.querySelectorAll(".box-VM-anim");
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-
-            images.forEach(image => {
-                image.classList.add("show");
-            });
-        } else {
-            entry.target.classList.remove("show");
-
-            images.forEach(image => {
-                image.classList.remove("show");
-            });
-        }
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
     });
-}, {
-    threshold: 0.2
-});
+  },
+  { threshold: 0.2 }
+);
 
-if (aboutSection) {
-    aboutObserver.observe(aboutSection);
-}
-
-const motto = document.querySelector(".motto");
-
-const observer1 = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
-    });
-}, {
-    threshold: 0.2
-});
-
-if (motto) {
-    observer1.observe(motto);
-}
+document
+  .querySelectorAll(".box-VM-anim, .motto")
+  .forEach((element) => revealObserver.observe(element));

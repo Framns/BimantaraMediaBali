@@ -1,5 +1,23 @@
 // console.log("SCRIPT A IS WORKING!");
 
+const why_us = document.querySelector(".why-us");
+
+const observer1 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+if (why_us) {
+    observer1.observe(why_us);
+}
+
 const imageSection = document.querySelector(".flex-image-link");
 
 const observer = new IntersectionObserver((entries) => {

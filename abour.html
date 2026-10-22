@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV Bimantara Media Bali</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styleA.css" />
-    <script src="script.js" defer></script>
-    <script src="scriptA.js" defer></script>
+    <title>Tentang Kami | CV Bimantara Media Bali</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +11,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleA.css" />
+    <script src="scriptA.js" defer></script>
   </head>
+
   <body>
     <header id="header-anim">
       <div>
@@ -35,52 +36,104 @@
       </div>
     </header>
 
-    <main>
+    <main class="about-page">
       <section class="about-anim">
+        <!-- INTRO: text on the left, store photo on the right -->
         <div class="about-section">
-          <h1>Tentang Kami</h1>
+          <div class="about-text">
+            <h1>Tentang Kami</h1>
 
-          <p>
-            CV. Bimantara Media Bali merupakan perusahaan yang berdiri sejak
-            tahun 2017 di Denpasar, Bali. Kami menyediakan berbagai kebutuhan
-            sekolah dan perkantoran, mulai dari buku pelajaran, buku pendamping,
-            buku literasi, mebel sekolah dan kantor, peralatan elektronik,
-            perlengkapan IT, bahan dan peralatan laboratorium, hingga alat
-            peraga edukatif. Dengan mengutamakan kualitas produk dan kecepatan
-            pelayanan, kami berkomitmen untuk memenuhi kebutuhan pelanggan
-            secara profesional dan memberikan pelayanan yang terbaik. Kami terus
-            berupaya menjadi mitra terpercaya dalam mendukung kebutuhan
-            pendidikan dan perkantoran.
-          </p>
+            <p>
+              CV. Bimantara Media Bali merupakan perusahaan yang berdiri sejak
+              tahun 2017 di Denpasar, Bali. Kami menyediakan berbagai kebutuhan
+              sekolah dan perkantoran, mulai dari buku pelajaran, buku
+              pendamping, buku literasi, mebel sekolah dan kantor, peralatan
+              elektronik, perlengkapan IT, bahan dan peralatan laboratorium,
+              hingga alat peraga edukatif.
+            </p>
+            <p>
+              Dengan mengutamakan kualitas produk dan kecepatan pelayanan, kami
+              berkomitmen untuk memenuhi kebutuhan pelanggan secara profesional
+              dan memberikan pelayanan yang terbaik. Kami terus berupaya menjadi
+              mitra terpercaya dalam mendukung kebutuhan pendidikan dan
+              perkantoran.
+            </p>
+
+            <ul class="about-facts">
+              <li><span aria-hidden="true">📅</span> Sejak 2017</li>
+              <li><span aria-hidden="true">📍</span> Denpasar, Bali</li>
+            </ul>
+          </div>
+
+          <!-- Replace the file with your own photo (horizontal, 4:3) -->
+          <img
+            class="about-photo"
+            src="images/tokoAbout.jpg"
+            alt="Tampak depan toko CV Bimantara Media Bali"
+          />
         </div>
 
+        <!-- PRODUCTS -->
+        <div class="about-products">
+          <h2 class="section-title">Yang Kami Sediakan</h2>
+          <p class="section-sub">
+            Kebutuhan sekolah dan perkantoran, lengkap dalam satu tempat.
+          </p>
+
+          <ul class="product-grid">
+            <li class="product-tile">
+              <span class="product-icon" aria-hidden="true">📚</span>
+              Buku pelajaran, pendamping, dan literasi
+            </li>
+            <li class="product-tile">
+              <span class="product-icon" aria-hidden="true">🪑</span>
+              Mebel sekolah dan kantor
+            </li>
+            <li class="product-tile">
+              <span class="product-icon" aria-hidden="true">🔌</span>
+              Peralatan elektronik
+            </li>
+            <li class="product-tile">
+              <span class="product-icon" aria-hidden="true">💻</span>
+              Perlengkapan IT
+            </li>
+            <li class="product-tile">
+              <span class="product-icon" aria-hidden="true">🧪</span>
+              Bahan dan peralatan laboratorium
+            </li>
+            <li class="product-tile">
+              <span class="product-icon" aria-hidden="true">🧩</span>
+              Alat peraga edukatif
+            </li>
+          </ul>
+        </div>
+
+        <!-- VISI & MISI -->
         <div class="parent">
           <div class="box-VM-anim">
-            <div class="box-V">
-              <img src="images/BookLogoW.png" />
-              <h1>Visi :</h1>
-              <p>
-                Memberikan Kontribusi Positif Dibidang Pendidikan di Indonesia
-              </p>
+            <div class="vm-card">
+              <img src="images/BookLogoW.png" alt="" />
+              <h2>Visi</h2>
+              <p>Memberikan kontribusi positif di bidang pendidikan di Indonesia</p>
             </div>
           </div>
+
           <div class="box-VM-anim">
-            <div class="box-M">
-              <img src="images/HandshakeLogoW.png" />
-              <h1>Misi :</h1>
-              <p>
-                Pelayanan Pelanggan Yang Baik Adalalah Nafas Kami
-              </p>
+            <div class="vm-card">
+              <img src="images/HandshakeLogoW.png" alt="" />
+              <h2>Misi</h2>
+              <p>Pelayanan pelanggan yang baik adalah nafas kami</p>
             </div>
           </div>
         </div>
 
+        <!-- MOTTO -->
         <div class="motto">
-          <img src="images/HeartLogoW.png" />
-          <h1>Motto kami</h1>
+          <img src="images/HeartLogoW.png" alt="" />
+          <h2>Motto kami</h2>
           <p>
-            Melayani Dunia Pendidikan dengan Sepenuh Hati, Menghadirkan
-            Kualitas dan Dedikasi untuk Mendukung Kemajuan Generasi Bangsa.
+            Melayani dunia pendidikan dengan sepenuh hati, menghadirkan kualitas
+            dan dedikasi untuk mendukung kemajuan generasi bangsa.
           </p>
         </div>
       </section>
