@@ -433,6 +433,7 @@
 
   .produk-page .track {
     --per: 1;
+    flex-direction: column;
   }
 }
 
