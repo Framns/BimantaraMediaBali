@@ -63,6 +63,7 @@
               <span class="tile-name">Lemari</span>
               <span class="tile-count" data-count-for="lemari"></span>
             </a>
+
             <a class="tile" href="#elektronik">
               <span class="tile-img">
                 <img
@@ -74,6 +75,7 @@
               <span class="tile-name">Elektronik</span>
               <span class="tile-count" data-count-for="elektronik"></span>
             </a>
+
             <a class="tile" href="#mebeler">
               <span class="tile-img">
                 <img src="images/produkImages/desk.jpg" 
@@ -83,7 +85,7 @@
               <span class="tile-name">Mebeler</span>
               <span class="tile-count" data-count-for="mebeler"></span>
             </a>
-            </a>
+
             <a class="tile" href="#sains">
               <span class="tile-img">
                 <img src="images/produkImages/sains1.jpg" 
@@ -92,6 +94,16 @@
               </span>
               <span class="tile-name">Sains</span>
               <span class="tile-count" data-count-for="sains"></span>
+            </a>
+
+            <a class="tile" href="#buku">
+              <span class="tile-img">
+                <img src="images/produkImages/sains1.jpg" 
+                alt="" 
+                loading="lazy" />
+              </span>
+              <span class="tile-name">Buku</span>
+              <span class="tile-count" data-count-for="buku"></span>
             </a>
           </nav>
         </div>
@@ -1841,7 +1853,83 @@
             </li>
           </ul>
       </div>
-          
+      </section>
+
+            <!-- ========== BUKU ========== -->
+      <section
+        class="category"
+        id="buku"
+        data-slider
+        aria-labelledby="buku-title"
+      >
+        <div class="wrap">
+          <div class="category-head">
+            <div>
+              <h2 id="buku-title">Buku</h2>
+              <p class="category-count" data-count-for="buku"></p>
+            </div>
+            <div class="slider-controls">
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="-1"
+                aria-label="Lihat produk sebelumnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15 5l-7 7 7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="slider-btn"
+                type="button"
+                data-dir="1"
+                aria-label="Lihat produk berikutnya"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 5l7 7-7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <ul class="track" tabindex="0" aria-label="Daftar mebeler">
+              <li class="card">
+              <div class="card-img">
+                <img
+                  src="images/produkImages/sains1.jpg"
+                  alt="Asam Klorida"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <p class="card-name">Asam Klorida</p>
+            </li>
+        </ul>
+        </div>
       </section>
     </main>
 

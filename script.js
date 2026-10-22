@@ -1,22 +1,24 @@
 // console.log("SCRIPT A IS WORKING!");
 
-const why_us = document.querySelector(".why-us");
+// Scroll reveal: replaces the old why_us / buy_nav observers in script.js.
+// Every element with class="reveal" fades up when it scrolls into view
+// (and resets when it leaves, so it replays). Stagger comes from --i in the HTML.
 
-const observer1 = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
     });
-}, {
-    threshold: 0.2
-});
+  },
+  {
+    threshold: 0.2,
+    rootMargin: "0px 0px -5% 0px",
+  }
+);
 
-if (why_us) {
-    observer1.observe(why_us);
-}
+document
+  .querySelectorAll(".reveal")
+  .forEach((element) => revealObserver.observe(element));
 
 const imageSection = document.querySelector(".flex-image-link");
 
