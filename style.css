@@ -638,6 +638,10 @@ header li {
     object-fit: cover;
   }
 
+  .why-grid {
+    grid-template-columns: repeat(1, 3fr);
+  }
+
   /* Know us more: stack cards vertically */
 
   .flex-image-link {
