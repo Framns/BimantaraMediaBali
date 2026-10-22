@@ -1,199 +1,252 @@
-main {
-    height: 600px;
+/* =========================
+   CONTACT PAGE
+   Loads after style.css and uses its :root variables.
+========================= */
+
+.contact-page {
+  --heading: rgb(0, 36, 168);
+  padding-top: 30px; /* fixed header height; raised on phones below */
+  color: var(--text);
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 8px;
+/* style.css sets a font on every element with *,
+   so the page font has to be applied to all descendants too. */
+.contact-page,
+.contact-page * {
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI",
+    Roboto, sans-serif;
 }
 
-.div1 {
-    grid-column-start: 2;
-    margin-top: 150px;
-    margin-left: 120px;
+/* =========================
+   INTRO
+========================= */
 
-    transform: translateY(70px);
-    animation: startup1 1s ease forwards;
+.contact-intro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 50px 24px 10px;
+  text-align: center;
+
+  opacity: 0;
+  animation: contactIn 0.8s ease forwards;
 }
 
-@keyframes startup1 {
+@keyframes contactIn {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.div1 img {
-    width: 160%;
-    height: 90%;
-    border-radius: 50%;
+.contact-intro h1 {
+  color: var(--heading);
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
 }
 
-.div2 {
-    grid-column-start: 3;
-    margin-top: 200px;
-    width: 100px;
-
-    transform: translateY(70px);
-    animation: startup2 1s ease forwards;
-}
-
-@keyframes startup2 {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.box {
-    margin-left: 150px;
-    padding-left: 20px;
-    padding-top: 10px;
-    background: #8ecbfa;
-    border-radius: 15px;
-    height: 170px;
-    width: 350px;
-}
-
-.box h2 {
-    margin-top: 10px;
+.contact-intro p {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: clamp(1rem, 0.6rem + 1vw, 1.15rem);
+  line-height: 1.7;
 }
 
 /* =========================
-   CONTACT PAGE - PHONE
-   ========================= */
+   PHOTO + CARDS
+========================= */
+
+.contact-layout {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 30px 24px 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.contact-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: rgba(129, 198, 245, 0.35); /* shown until the photo exists */
+  box-shadow: var(--shadow-md);
+
+  opacity: 0;
+  animation: contactIn 0.8s ease 0.15s forwards;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 16px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 24px;
+
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+
+  opacity: 0;
+  animation: contactIn 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cards appear one after another */
+
+.contact-card:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+.contact-card:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.contact-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.contact-card:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+a.contact-card:hover,
+a.contact-card:active {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(129, 198, 245, 0.35);
+  font-size: 1.6rem;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contact-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contact-value {
+  color: var(--heading);
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.contact-address {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* WhatsApp stands out as the main action */
+
+.contact-card-wa {
+  background: #25d366;
+}
+
+.contact-card-wa .contact-icon {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.contact-card-wa .contact-label,
+.contact-card-wa .contact-value {
+  color: #072b16;
+}
+
+/* =====================================================
+   TABLET AND MOBILE
+   768px and below
+===================================================== */
 
 @media (max-width: 768px) {
+  .contact-page {
+    padding-top: 115px; /* taller header on phones (see style.css) */
+  }
 
-    body {
-        overflow-x: hidden;
-    }
+  .contact-intro {
+    padding: 30px 20px 0;
+  }
 
-    main {
-        height: auto;
-        min-height: 650px;
-    }
+  /* Photo on top, cards below */
 
-    .parent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 20px 20px;
+  }
 
-        width: 100%;
-        padding-top: 120px;
-        box-sizing: border-box;
-    }
+  .contact-photo {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+}
 
-    /* Contact image */
-    .div1 {
-        margin: 0;
-        width: 75%;
-        transform: translateY(70px);
-        animation: startup1 1s ease forwards;
-    }
+/* =====================================================
+   SMALL PHONES
+   480px and below
+===================================================== */
 
-    .div1 img {
-        display: block;
+@media (max-width: 480px) {
+  .contact-page {
+    padding-top: 110px;
+  }
 
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1 / 1;
+  .contact-card {
+    gap: 14px;
+    padding: 16px 18px;
+  }
 
-        object-fit: cover;
-        border-radius: 50%;
-    }
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.35rem;
+  }
+}
 
-    /* Contact information */
-    .div2 {
-        margin: 0;
-        width: 100%;
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
 
-        display: flex;
-        justify-content: center;
-
-        transform: translateX(100px);
-        animation: startup2 1s ease forwards;
-    }
-
-    .box {
-        margin: 0;
-
-        width: 80%;
-        max-width: 350px;
-        height: auto;
-
-        min-height: 170px;
-
-        box-sizing: border-box;
-
-        padding: 20px;
-
-        background: #8ecbfa;
-        border-radius: 15px;
-
-        text-align: center;
-    }
-
-    .box h1 {
-        font-size: 27px;
-        margin-top: 0;
-    }
-
-    .box h2 {
-        font-size: 20px;
-        margin-top: 15px;
-    }
-
-
-    /* Footer */
-    footer {
-        height: auto;
-        min-height: 300px;
-
-        box-sizing: border-box;
-        padding: 30px 20px;
-    }
-
-    .footer-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .footer-title img {
-        width: 45px;
-        height: auto;
-    }
-
-    .footer-title h2 {
-        font-size: 20px;
-    }
-
-    .loc-title {
-        margin-top: 25px;
-    }
-
-    .loc-title h1 {
-        font-size: 24px;
-    }
-
-    .loc-info {
-        margin: 0;
-    }
-
-    .loc-info p {
-        font-size: 16px;
-        margin: 5px 0;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .contact-intro,
+  .contact-photo,
+  .contact-card {
+    opacity: 1;
+    animation: none;
+    transition: none;
+  }
 }

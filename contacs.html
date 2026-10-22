@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="styleC.css">
+    <title>Kontak Kami | CV Bimantara Media Bali</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleC.css" />
   </head>
+
   <body>
     <header id="header-anim">
       <div>
-        <img src="images/Logobm.png" alt="Logo"/>
+        <img src="images/Logobm.png" alt="Logo" />
         <h3>CV Bimantara Media Bali</h3>
 
         <nav>
@@ -26,19 +35,66 @@
       </div>
     </header>
 
-    <main>
-      <div class="parent">
-        <div class="div1">
-          <img src="images/contactImg.jpeg" alt="foto kontak">
-        </div>
-        <div class="div2">
-          <div class="box">
-            <h1>Nomor Kontak Kami</h1>
-            <h2>018108208208</h2>
-            <h2>018108208208</h2>
+    <main class="contact-page">
+      <section class="contact-intro">
+        <h1>Hubungi Kami</h1>
+        <p>
+          Ada pertanyaan tentang produk? Hubungi kami lewat telepon atau
+          WhatsApp, atau kunjungi langsung toko kami.
+        </p>
+      </section>
+
+      <section class="contact-layout">
+        <!-- Horizontal photo works best (4:3) -->
+        <img
+          class="contact-photo"
+          src="images/contactImg.jpeg"
+          alt="Foto kontak CV Bimantara Media Bali"
+        />
+
+        <div class="contact-cards">
+          <a class="contact-card" href="tel:081358594788">
+            <span class="contact-icon" aria-hidden="true">📞</span>
+            <span class="contact-text">
+              <span class="contact-label">Telepon</span>
+              <span class="contact-value">081358594788</span>
+            </span>
+          </a>
+
+          <a class="contact-card" href="tel:018108208208">
+            <span class="contact-icon" aria-hidden="true">☎️</span>
+            <span class="contact-text">
+              <span class="contact-label">Telepon</span>
+              <span class="contact-value">018108208208</span>
+            </span>
+          </a>
+
+          <a
+            class="contact-card contact-card-wa"
+            href="https://wa.me/6281358594788?text=Halo%20CV%20Bimantara%20Media%20Bali%2C%20saya%20ingin%20menanyakan%20produk."
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="contact-icon" aria-hidden="true">💬</span>
+            <span class="contact-text">
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-value">Chat sekarang</span>
+            </span>
+          </a>
+
+          <div class="contact-card contact-card-static">
+            <span class="contact-icon" aria-hidden="true">📍</span>
+            <span class="contact-text">
+              <span class="contact-label">Alamat toko</span>
+              <span class="contact-address">
+                <a href="https://www.google.com/maps/place/Srikandi+Mart/@-8.5294334,115.1380931,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd23bf1a0261501:0x80c1065360ee2c57!8m2!3d-8.5294334!4d115.140668!16s%2Fg%2F11hk1lvch7?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D">
+                  Banjar Anyar, Kec. Kediri, Kabupaten Tabanan, Bali 82121
+                </a>
+              </span>
+            </span>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="site-footer">
