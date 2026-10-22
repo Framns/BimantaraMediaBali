@@ -1,7 +1,5 @@
 /* =====================================================
    styleP.css — Halaman Produk, CV Bimantara Media Bali
-   Semua aturan dibatasi di bawah body.produk-page supaya
-   tidak bentrok dengan style.css (header/footer bersama).
    ===================================================== */
 
 .produk-page {
@@ -28,6 +26,13 @@
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* Prevents global horizontal scrollbar */
+}
+
+/* Ensure padding and borders don't increase element widths */
+.produk-page,
+.produk-page * {
+  box-sizing: border-box;
 }
 
 .produk-page .wrap {
@@ -128,7 +133,7 @@
   display: none;
 }
 
-/* Satu momen animasi: hero muncul bertahap saat halaman dibuka */
+/* Animations */
 @media (prefers-reduced-motion: no-preference) {
   .produk-page .rise {
     animation: rise 0.7s cubic-bezier(0.6, 0.7, 0.6, 1) both;
@@ -154,6 +159,7 @@
 .produk-page .category {
   padding-top: 56px;
   scroll-margin-top: 68px;
+  width: 100%;
 }
 
 .produk-page .category-head {
@@ -214,7 +220,6 @@
   cursor: default;
 }
 
-/* Jalur kartu: scroll-snap bawaan browser, swipe di HP bekerja otomatis */
 .produk-page .track {
   --per: 4;
 
@@ -287,58 +292,25 @@
   overflow-wrap: anywhere;
 }
 
-
 /* =====================================================
-   LAPTOP AND BELOW
-   1148px and below
-   .wrap is width: 100% plus side padding, which makes it
-   wider than the screen once the screen is narrower than
-   max-width + padding. border-box keeps it inside the
-   screen, so there is no sideways overflow and no gap
-   on the right of the footer.
-===================================================== */
-
-@media (max-width: 1148px) {
-
-  .produk-page .wrap {
-    box-sizing: border-box;
-  }
-}
-
-
-/* =====================================================
-   TABLET
-   769px - 1024px
-===================================================== */
+   TABLET (769px - 1024px)
+   ===================================================== */
 
 @media (max-width: 1024px) {
-
-  /* Product slider: 3 cards per screen */
-
   .produk-page .track {
     --per: 3;
   }
 }
 
-
 /* =====================================================
-   MOBILE
-   768px and below
-   (the shared header in style.css is 115px tall here)
-===================================================== */
+   MOBILE (768px and below)
+   ===================================================== */
 
 @media (max-width: 768px) {
-
   .produk-page {
     --side: 16px;
     --gap: 14px;
-
-    overflow-x: hidden;
   }
-
-  /* =========================
-     HERO
-  ========================= */
 
   .produk-page .hero {
     padding: 150px 0 8px;
@@ -348,15 +320,8 @@
     font-size: 1.0625rem;
   }
 
-  .produk-page .btn {
-    width: 100%;
-  }
-
-  /* =========================
-     TILES
-  ========================= */
-
   .produk-page .tiles {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
     margin-top: 32px;
     gap: 10px;
   }
@@ -384,25 +349,18 @@
     font-size: 0.8125rem;
   }
 
-  /* =========================
-     CATEGORY + SLIDER
-  ========================= */
-
   .produk-page .category {
     padding-top: 44px;
     scroll-margin-top: 130px;
   }
 
-  /* 2 cards per screen, swipe to see more */
-
+  /* Fixed overflow bug by removing negative margins */
   .produk-page .track {
     --per: 2;
-
-    width: auto;
-
-    margin-inline: calc(var(--side) * -1);
-    padding-inline: var(--side);
-    scroll-padding-inline: var(--side);
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+    scroll-padding-inline: 0;
   }
 
   .produk-page .slider-btn {
@@ -412,15 +370,10 @@
 }
 
 /* =====================================================
-   SMALL PHONES
-   480px and below
-   (the shared header in style.css is 110px tall here)
-===================================================== */
+   SMALL PHONES (480px and below)
+   ===================================================== */
 
 @media (max-width: 480px) {
-
-  /* Hero */
-
   .produk-page .hero {
     padding-top: 145px;
   }
@@ -429,21 +382,16 @@
     scroll-margin-top: 125px;
   }
 
-  /* 1 card per screen with the next one peeking in */
-
   .produk-page .track {
     --per: 1;
   }
 }
 
-
 /* =====================================================
-   EXTRA SMALL PHONES
-   360px and below
-===================================================== */
+   EXTRA SMALL PHONES (360px and below)
+   ===================================================== */
 
 @media (max-width: 360px) {
-
   .produk-page .tiles {
     gap: 8px;
   }
