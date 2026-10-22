@@ -638,16 +638,8 @@ header li {
     object-fit: cover;
   }
 
-  .why-us {
-    box-sizing: border-box;
-  }
-
   .why-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-    padding: 0;
+    grid-template-columns: 1fr;
   }
 
   /* Know us more: stack cards vertically */
