@@ -76,4 +76,98 @@
  
   document.querySelectorAll("[data-slider]").forEach(initSlider);
 })();
- 
+
+// imageSwitcher.js — Halaman Produk, CV Bimantara Media Bali
+// Setiap kartu produk punya daftar gambar sendiri dan ganti gambar dengan kecepatannya sendiri.
+//
+// Cara pakai (pada <img> di dalam kartu):
+//   <img src="images/produkImages/buku1_1.jpg"
+//        data-images="images/produkImages/buku1_1.jpg, images/produkImages/buku1_2.jpg"
+//        data-interval="3500" />
+//
+//   data-images   : daftar gambar, dipisah koma (gambar pertama = gambar di src)
+//   data-interval : opsional, jeda antar gambar dalam milidetik.
+//                   Kalau tidak diisi, tiap kartu otomatis dapat kecepatan berbeda.
+
+(() => {
+  "use strict";
+
+  const FADE_MS = 400; // lama transisi memudar
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const canHover = window.matchMedia("(hover: hover)");
+
+  function initSwitcher(img, index) {
+    const images = (img.dataset.images || "")
+      .split(",")
+      .map((src) => src.trim())
+      .filter(Boolean);
+    if (images.length < 2) return;
+
+    // Kecepatan berbeda tiap kartu (antara 2,5 dan 5,2 detik) kalau tidak diatur manual
+    const interval =
+      Number(img.dataset.interval) || 2500 + ((index * 770) % 2700);
+
+    const card = img.closest(".card") || img;
+    let current = Math.max(0, images.indexOf(img.getAttribute("src")));
+    let timer = null;
+    let hovering = false;
+    let visible = false;
+
+    img.style.transition = "opacity " + FADE_MS + "ms ease";
+
+    function schedule() {
+      clearTimeout(timer);
+      timer = setTimeout(next, interval);
+    }
+
+    function next() {
+      // Pengguna yang mematikan animasi di sistemnya: jangan ganti otomatis
+      if (reduceMotion.matches) return;
+
+      // Tunggu kalau kartu sedang di-hover, di luar layar, atau tab tersembunyi
+      if (hovering || !visible || document.hidden) {
+        schedule();
+        return;
+      }
+
+      const target = (current + 1) % images.length;
+
+      // Muat gambar berikutnya dulu supaya tidak ada kedipan kosong
+      const preload = new Image();
+      preload.onload = () => swap(target);
+      preload.onerror = () => {
+        current = target; // lewati file yang tidak ketemu
+        schedule();
+      };
+      preload.src = images[target];
+    }
+
+    function swap(target) {
+      img.style.opacity = "0";
+      setTimeout(() => {
+        img.src = images[target];
+        img.style.opacity = "1";
+        current = target;
+        schedule();
+      }, FADE_MS);
+    }
+
+    // Hanya jalan saat kartu benar-benar terlihat (kartu di luar slider tidak ikut jalan)
+    new IntersectionObserver(
+      (entries) => {
+        visible = entries[0].isIntersecting;
+      },
+      { threshold: 0.3 }
+    ).observe(card);
+
+    // Jeda saat kursor di atas kartu (hanya di perangkat dengan mouse)
+    if (canHover.matches) {
+      card.addEventListener("mouseenter", () => (hovering = true));
+      card.addEventListener("mouseleave", () => (hovering = false));
+    }
+
+    schedule();
+  }
+
+  document.querySelectorAll("img[data-images]").forEach(initSwitcher);
+})();

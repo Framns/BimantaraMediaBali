@@ -14,7 +14,7 @@
   --line: #dde3f0;
   --pencil: #ffc933;
 
-  --gap: 20px;
+  --gap: 15px;
   --wrap: 1100px;
   --side: 24px;
 
@@ -271,22 +271,22 @@
 }
 
 .produk-page .card-img {
-  display: grid;
-  place-items: center;
+  position: relative;
   aspect-ratio: 4 / 3;
   margin: 8px 8px 0;
-  padding: 14px;
   border-radius: 10px;
   background: var(--sheet);
+  overflow: hidden;
 }
 
 .produk-page .card-img img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0;
-  object-fit: contain;
+  position: absolute;
+  inset: 14px;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+  max-width: none;
+  max-height: none;
+  object-fit: contain;  
 }
 
 .produk-page .card-name {

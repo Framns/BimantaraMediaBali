@@ -824,11 +824,6 @@ header li {
     max-width: 500px;
   }
 
-  .flex-img:hover .hover-bar1,
-  .flex-img:active .hover-bar1 {
-    width: 30%;
-  }
-
   .flex-img h1 {
     margin-top: -65px;
     margin-left: 20px;
