@@ -376,8 +376,7 @@ header li {
  
 .buy-nav {
   width: 75%;
-  margin-top: 40px;
-  margin-left: 120px;
+  margin: 40px auto 0;
   padding: 48px 28px;
   border-radius: var(--radius);
   background: var(--brand-dark);
@@ -458,8 +457,8 @@ header li {
  
 @media (max-width: 768px) {
   .buy-nav {
-    margin-top: 48px;
-    margin-left: 20px;
+    width: 100%;
+    margin: 48px auto 0;
     padding: 36px 20px;
   }
  
