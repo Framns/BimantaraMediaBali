@@ -374,7 +374,7 @@ header li {
 ========================= */
  
 .buy-nav {
-  width: min(100%, 880px);   
+  width: min(100%, 700px);   
   margin: 40px auto 0;
   padding: 48px 28px;
   border-radius: var(--radius);
