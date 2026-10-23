@@ -373,6 +373,12 @@ header li {
    BUY FROM (SIPLah / Toko Ladang)
 ========================= */
  
+.buy-nav,
+.buy-card,
+.buy-logos {
+  box-sizing: border-box;
+}
+
 .buy-nav {
   width: min(100%, 880px);   
   margin: 40px auto 0;
