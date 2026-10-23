@@ -826,7 +826,7 @@ header li {
 
   .flex-img:hover .hover-bar1,
   .flex-img:active .hover-bar1 {
-    width: 53%;
+    width: 30%;
   }
 
   .flex-img h1 {
