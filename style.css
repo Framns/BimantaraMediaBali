@@ -785,6 +785,10 @@ header li {
     margin: 48px auto 0;
     padding: 36px 20px;
   }
+
+  .buy-grid {
+    max-width: 700px;
+  }
  
   .buy-card {
     padding: 24px 18px;
