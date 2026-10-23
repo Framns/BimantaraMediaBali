@@ -764,7 +764,7 @@ header li {
   }
 
   .buy-nav {
-    width: 200%;
+    width: 100%;
     margin: 48px auto 0;
     padding: 36px 20px;
   }
@@ -895,6 +895,24 @@ header li {
   .home-img {
     top: 110px;
     height: calc(100% - 110px);
+  }
+
+    .buy-nav {
+    width: 100%;
+    margin: 48px auto 0;
+    padding: 36px 20px;
+  }
+ 
+  .buy-card {
+    padding: 24px 18px;
+  }
+ 
+  .buy-logos {
+    gap: 20px;
+  }
+ 
+  .buy-logos img {
+    height: 60px;
   }
 
   /* Know us more */
