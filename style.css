@@ -457,7 +457,7 @@ header li {
  
 @media (max-width: 768px) {
   .buy-nav {
-    width: 80%;
+    width: 50%;
     margin: 48px auto 0;
     padding: 36px 20px;
   }
