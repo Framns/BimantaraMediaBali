@@ -371,10 +371,13 @@ header li {
  
 /* =========================
    BUY FROM (SIPLah / Toko Ladang)
+   Replace your whole BUY FROM section with this.
 ========================= */
  
 .buy-nav {
-  margin-top: 72px;
+  width: 75%;
+  margin-top: 40px;
+  margin-left: 120px;
   padding: 48px 28px;
   border-radius: var(--radius);
   background: var(--brand-dark);
@@ -390,10 +393,11 @@ header li {
   color: rgba(255, 255, 255, 0.85);
 }
  
+/* One card, centered */
+ 
 .buy-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  display: flex;
+  justify-content: center;
   max-width: 760px;
   margin: 36px auto 0;
 }
@@ -402,9 +406,10 @@ header li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  height: 230px;
-  padding: 15px 28px 24px;
+  gap: 24px;
+  width: 50%;
+  max-width: 560px;
+  padding: 32px 28px;
   border-radius: var(--radius);
   background: var(--surface);
   color: var(--text);
@@ -418,22 +423,25 @@ header li {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
 }
  
-.buy-logo {
-  display: grid;
-  place-items: center;
+/* Both logos side by side */
+ 
+.buy-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
   width: 100%;
-  height: 90px;
-  margin-bottom: 8px;
 }
  
-.buy-logo img {
-  max-width: 70%;
-  max-height: 100%;
+.buy-logos img {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 45%;
+  height: 80px;
   object-fit: contain;
 }
  
 .buy-cta {
-  margin-top: 90px;
   padding: 10px 22px;
   border-radius: 999px;
   background: var(--accent);
@@ -445,18 +453,25 @@ header li {
 .buy-card:hover .buy-cta {
   background: var(--accent-dark);
 }
-
-/* Phones: stack the two cards */
-
+ 
+/* Phones */
+ 
 @media (max-width: 768px) {
   .buy-nav {
     margin-top: 48px;
     padding: 36px 20px;
   }
-
-  .buy-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
+ 
+  .buy-card {
+    padding: 24px 18px;
+  }
+ 
+  .buy-logos {
+    gap: 20px;
+  }
+ 
+  .buy-logos img {
+    height: 60px;
   }
 }
 
