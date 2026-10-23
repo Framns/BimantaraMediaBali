@@ -371,11 +371,10 @@ header li {
  
 /* =========================
    BUY FROM (SIPLah / Toko Ladang)
-   Replace your whole BUY FROM section with this.
 ========================= */
  
 .buy-nav {
-  width: 75%;
+  width: min(100%, 880px);   
   margin: 40px auto 0;
   padding: 48px 28px;
   border-radius: var(--radius);
@@ -406,8 +405,8 @@ header li {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  width: 50%;
-  max-width: 560px;
+  width: 100%;               
+  max-width: 420px; 
   padding: 32px 28px;
   border-radius: var(--radius);
   background: var(--surface);
