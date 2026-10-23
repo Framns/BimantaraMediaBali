@@ -456,23 +456,7 @@ header li {
 /* Phones */
  
 @media (max-width: 768px) {
-  .buy-nav {
-    width: 50%;
-    margin: 48px -10px auto 0;
-    padding: 36px 20px;
-  }
- 
-  .buy-card {
-    padding: 24px 18px;
-  }
- 
-  .buy-logos {
-    gap: 20px;
-  }
- 
-  .buy-logos img {
-    height: 60px;
-  }
+
 }
 
 /* =========================
@@ -777,6 +761,24 @@ header li {
 
   .why-grid {
     grid-template-columns: 1fr;
+  }
+
+  .buy-nav {
+    width: 50%;
+    margin: 48px -10px auto 0;
+    padding: 36px 20px;
+  }
+ 
+  .buy-card {
+    padding: 24px 18px;
+  }
+ 
+  .buy-logos {
+    gap: 20px;
+  }
+ 
+  .buy-logos img {
+    height: 60px;
   }
 
   /* Know us more: stack cards vertically */
