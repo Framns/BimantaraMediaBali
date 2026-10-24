@@ -77,9 +77,6 @@
   document.querySelectorAll("[data-slider]").forEach(initSlider);
 })();
 
-// imageSwitcher.js — Halaman Produk, CV Bimantara Media Bali
-// Setiap kartu produk punya daftar gambar sendiri dan ganti gambar dengan kecepatannya sendiri.
-//
 // Cara pakai (pada <img> di dalam kartu):
 //   <img src="images/produkImages/buku1_1.jpg"
 //        data-images="images/produkImages/buku1_1.jpg, images/produkImages/buku1_2.jpg"
